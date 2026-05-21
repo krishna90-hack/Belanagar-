@@ -33,6 +33,10 @@ body {
   overflow-x: hidden;
   line-height: 1.7;
 }
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; }
 
@@ -120,6 +124,16 @@ img { max-width: 100%; }
   background: var(--gold-light);
   border-radius: 2px;
   transition: var(--transition);
+  transform-origin: center;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ===== HERO ===== */
